@@ -40,31 +40,31 @@ $(function(){
 	   	$.localStorage.remove(pk);
 	   	$.localStorage.remove(rk);
 	   }
-	 window.location.replace("main.html");
-	 /*
+	 
+	 
 		$.ajax({
 	     type: "POST",
-	     url: "/hrm/user/ajaxlogin",
+	     url: "/project/user/ajaxlogin.action",
 	     async: true,
 	     data:{
 	    	 loginname:loginname.trim(),
 	    	 password:password.trim()
 	    	 },
-	     dataType: "json",
+	     
 	     error: function (XMLHttpRequest, textStatus, errorThrown) {
 	     	$.MsgBox.Alert("消息","出错了，请于管理员联系");
 	     },
 	     success: function (json) {
-	     	if(json.message!=""){
-	     		$("#tishi").html(json.message);
+	     	if(json==""){
+	     		$("#tishi").html("用户名或密码错误");
 	     	}else{
-	     		window.location.replace("main");
+	     		window.location.replace("main.html");
 	     		
 	     		//alert(JSON.stringify(json));
 	     	}
 	     }
 	 });
-	   */
+	   
 	   /** 提交表单 */
 	   //$("#loginForm").submit();
 		   

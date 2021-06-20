@@ -62,5 +62,6 @@ public interface UserInfMapper {
 	List<UserInf> getUsers(@Param("username")String username, @Param("status")int status, @Param("page")Page page);
 	int getTotal(@Param("username")String username, @Param("status")int status);
 	
-	
+	UserInf login(UserInf user);
+	void updatePassword(@Param("newpassword")String newpassword,@Param("id")int id);
 }

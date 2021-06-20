@@ -192,5 +192,17 @@
   </select>
   
   
+  <!-- 用户 -->
+  <select id="login" resultMap="BaseResultMap" parameterType="com.chinasofti.pojo.UserInf" >
+   
+    select 
+    <include refid="Base_Column_List" />
+    from user_inf
+    where loginname=#{loginname} and password=#{password}
+  </select>
+  <update id="updatePassword" >
+  update user_inf set password=#{newpassword} where id=#{id}
+  </update>
+  
   
 </mapper>

@@ -1,0 +1,5 @@
+UserInfMapper.java
+UserInfMapper.xml
+IUserInfService.java
+UserInfServiceImpl.java
+UserInfAction.java------user.jsp

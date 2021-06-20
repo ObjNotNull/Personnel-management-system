@@ -79,4 +79,20 @@ public class UserInfServiceImpl implements IUserInfService {
 		return t%size==0?t/size:t/size+1;
 	}
 
+	
+	// ÓÃ»§µÇÂ¼ 210619
+	@Override
+	public UserInf login(UserInf user) {
+		// TODO Auto-generated method stub
+		MD5 m = new MD5();
+		user.setPassword(m.getMD5ofStr(user.getPassword()));
+		return userInfMapper.login(user);
+	}
+	
+	@Override
+	public void updatePassword(String newpassword, int id) {
+		// TODO Auto-generated method stub
+		userInfMapper.updatePassword(newpassword, id);
+	}
+
 }
