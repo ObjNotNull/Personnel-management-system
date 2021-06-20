@@ -192,6 +192,7 @@
   </select>
   
   
+  
   <!-- 用户 -->
   <select id="login" resultMap="BaseResultMap" parameterType="com.chinasofti.pojo.UserInf" >
    

@@ -67,6 +67,8 @@ $(function(){
 	   
 	   /** 提交表单 */
 	   //$("#loginForm").submit();
+		
+		
 		   
    })
 	   

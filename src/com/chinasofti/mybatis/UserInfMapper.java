@@ -58,6 +58,7 @@ public interface UserInfMapper {
     int updateByPrimaryKey(UserInf record);
     
 	
+    
 	// 多个参数 @param 注入
 	List<UserInf> getUsers(@Param("username")String username, @Param("status")int status, @Param("page")Page page);
 	int getTotal(@Param("username")String username, @Param("status")int status);

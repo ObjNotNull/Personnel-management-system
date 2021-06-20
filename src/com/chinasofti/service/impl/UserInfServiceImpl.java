@@ -80,6 +80,7 @@ public class UserInfServiceImpl implements IUserInfService {
 	}
 
 	
+	
 	// ÓÃ»§µÇÂ¼ 210619
 	@Override
 	public UserInf login(UserInf user) {
