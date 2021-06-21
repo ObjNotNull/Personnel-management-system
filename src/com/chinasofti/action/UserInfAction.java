@@ -107,8 +107,9 @@ public class UserInfAction {
 			return "fail";
 		}
 		
-		
-		
 	}
+	
+	
+	
 	
 }

@@ -21,6 +21,17 @@
 		
 </bean>
 -->
+
+
+<!-- 就是spring对上传的支持 -->
+<bean id="multipartResolver"
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <property name="maxUploadSize" value="10240000"/>
+</bean>
+
+
+
+
 <!-- c3p0的连接池 -->
 	 <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>

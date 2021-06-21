@@ -143,4 +143,18 @@
       USER_ID = #{userId,jdbcType=INTEGER}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+  
+  
+  <select id="getDocs" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from document_inf where 1=1
+    <if test="title!=null and title!='' ">
+    and title like concat(concat('%',#{title}),'%')
+    </if>
+    limit #{page.start},#{page.size}
+  </select>
+  
+  
+  
 </mapper>
